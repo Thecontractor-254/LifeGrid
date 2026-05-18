@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFEGRID</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+<div class="container">
+        <div class="titleArea">
+          <h1>LIFEGRID</h1>
+        </div>
+
+      <div class="monthSel">
+          <button id="prevMonth">←</button>
+          <span id="currMonth"> - </span>
+          <button id="nextMonth">→</button>
+      </div>
+
+      <div class="legend" id="legendContainer"></div>
+
+    <div class="gridWrapper">
+          <div class="grid" id="lifeGrid"></div>
+    </div>
+
+        <div class="stats">
+          <div class="summary" id="statsSummary"></div>
+          <button id="resMonth" class="small">Reset Month(Clear all)</button>
+        </div>
+</div>
+
+// modal for editing
+<div id="cellModal" class="modal">
+  <div class="modalCard">
+    <h3>Log Activity</h3>
+    <label>Category</label>
+    <select id="modalCategory">
+            <option value="work">Work</option>
+            <option value="rest">Recovery</option>
+            <option value="admin">Growth</option>
+            <option value="social">Leisure</option>
+            <option value="health">Maintenance</option>
+            <option value="business">Business</option>
+    </select>
+    <label>Activity tag</label>
+    <input type="text" id="modalActivityTag" placeholder="Enter activity tag">
+    <div class="modalButtons">
+      <button id="saveBtn">Save</button>
+      <button id="cancelBtn">Cancel</button>
+
+    </div>
+  </div>
+</div>
+
+
+  </body>
