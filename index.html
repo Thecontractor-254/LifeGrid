@@ -10,12 +10,12 @@
 
 <div class="container">
         <div class="titleArea">
-          <h1>LIFEGRID</h1>
+          <h1>LifeGrid</h1>
         </div>
 
       <div class="monthSel">
           <button id="prevMonth">←</button>
-          <span id="currMonth"> - </span>
+          <button id="currMonth"> - </button>
           <button id="nextMonth">→</button>
       </div>
 
@@ -31,17 +31,16 @@
         </div>
 </div>
 
-// modal for editing
 <div id="cellModal" class="modal">
   <div class="modalCard">
     <h3>Log Activity</h3>
     <label>Category</label>
     <select id="modalCategory">
             <option value="work">Work</option>
-            <option value="rest">Recovery</option>
-            <option value="admin">Growth</option>
-            <option value="social">Leisure</option>
-            <option value="health">Maintenance</option>
+            <option value="growth">Growth</option>
+            <option value="recovery">Recovery</option>
+            <option value="leisure">Leisure</option>
+            <option value="maintenance">Maintenance</option>
             <option value="business">Business</option>
     </select>
     <label>Activity tag</label>
@@ -54,5 +53,6 @@
   </div>
 </div>
 
+<script src="index.js"></script>
 
   </body>
