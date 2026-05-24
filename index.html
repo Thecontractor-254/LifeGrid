@@ -4,55 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIFEGRID</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
 
 <div class="container">
-        <div class="titleArea">
-          <h1>LifeGrid</h1>
+    <div class="header">
+        <div class="title-area">
+            <h1>📅 LifeGrid · Weekly View</h1>
+            <p>Time → columns | Days → rows | 2‑hr blocks | categories + tags</p>
+        </div>
+        <div class="month-selector">
+            <button id="prevMonthBtn">←</button>
+            <span id="monthDisplay">—</span>
+            <button id="nextMonthBtn">→</button>
         </div>
 
-      <div class="monthSel">
-          <button id="prevMonth">←</button>
-          <button id="currMonth"> - </button>
-          <button id="nextMonth">→</button>
-      </div>
+        <button id="darkModeToggle" style="background: none; border: 1px solid var(--border-light); border-radius: 40px; padding: 6px 14px; cursor: pointer; color: var(--text-primary);">🌙 Dark</button>
 
-      <div class="legend" id="legendContainer"></div>
-
-    <div class="gridWrapper">
-          <div class="grid" id="lifeGrid"></div>
+        <div class="legend" id="legendContainer"></div>
     </div>
 
-        <div class="stats">
-          <div class="summary" id="statsSummary"></div>
-          <button id="resMonth" class="small">Reset Month(Clear all)</button>
-        </div>
+    <div class="weeks-container" id="weeksContainer"></div>
+
+    <div class="stats">
+        <div class="summary" id="statsSummary"></div>
+        <button id="resetMonthBtn" class="small">⟳ Reset this month</button>
+    </div>
 </div>
 
+<!-- Modal -->
 <div id="cellModal" class="modal">
-  <div class="modalCard">
-    <h3>Log Activity</h3>
-    <label>Category</label>
-    <select id="modalCategory">
-            <option value="work">Work</option>
-            <option value="growth">Growth</option>
-            <option value="recovery">Recovery</option>
-            <option value="leisure">Leisure</option>
+    <div class="modal-card">
+        <h3>✏️ Log 2‑hour block</h3>
+        <label>Category</label>
+        <select id="modalCategory">
+            <option value="deepWork">Deep work</option>
+            <option value="rest">Recovery</option>
             <option value="maintenance">Maintenance</option>
-            <option value="business">Business</option>
-    </select>
-    <label>Activity tag</label>
-    <input type="text" id="modalActivityTag" placeholder="Enter activity tag">
-    <div class="modalButtons">
-      <button id="saveBtn">Save</button>
-      <button id="cancelBtn">Cancel</button>
-
+            <option value="social">Social & Leisure</option>
+            <option value="health">Growth</option>
+            <option value="employment">Job</option>
+            <option value="empty">Unlogged / empty</option>
+        </select>
+        <label>Activity tag (e.g., sleep, gym, meeting)</label>
+        <input type="text" id="modalActivity" placeholder="optional short tag" autocomplete="off">
+        <div class="modal-buttons">
+            <button id="closeModalBtn">Cancel</button>
+            <button id="saveCellBtn">Save</button>
+        </div>
     </div>
-  </div>
 </div>
 
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="index.js"></script>
 
   </body>
+</html>
