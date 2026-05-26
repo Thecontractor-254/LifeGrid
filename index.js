@@ -5,7 +5,7 @@ const CATEGORIES = {
     rest: { label: "Recovery", class: "rest" },
     maintenance: { label: "Maintenance", class: "maintenance" },
     social: { label: "Social & Leisure", class: "social" },
-    health: { label: "Growth", class: "health" },
+    growth: { label: "Growth", class: "growth" },
     employment: { label: "Job", class: "employment" },
     empty: { label: "Unlogged", class: "empty" }
 };
@@ -265,12 +265,12 @@ function renderLegend() {
 
         let colorStyle = '#ebedf0';
 
-        if (catKey === 'deepWork') colorStyle = '#1f77b4';
-        else if (catKey === 'rest') colorStyle = '#2ca02c';
-        else if (catKey === 'maintenance') colorStyle = '#ff7f0e';
-        else if (catKey === 'social') colorStyle = '#d62728';
-        else if (catKey === 'health') colorStyle = '#9467bd';
-        else if (catKey === 'employment') colorStyle = '#8c564b';
+            if (catKey === 'deepWork') colorStyle = '#2E8B57';
+        else if (catKey === 'rest') colorStyle = '#9467bd';
+        else if (catKey === 'maintenance') colorStyle = '#FFA6C9';
+        else if (catKey === 'social') colorStyle = '#556dbb';
+        else if (catKey === 'growth') colorStyle = '#E4D00A';
+        else if (catKey === 'employment') colorStyle = '#268692';
 
         html += `
             <div class="legend-item ${activeFilter === catKey ? 'active-filter' : ''}" data-filter="${catKey}">
@@ -621,7 +621,7 @@ function updateStats() {
         rest: 0,
         maintenance: 0,
         social: 0,
-        health: 0,
+        growth: 0,
         employment: 0,
         empty: 0
     };
@@ -659,7 +659,7 @@ function updateStats() {
             <div class="summary-chip">😴 Rest: ${counts.rest}</div>
             <div class="summary-chip">📋 Maintenance: ${counts.maintenance}</div>
             <div class="summary-chip">🎉 Social: ${counts.social}</div>
-            <div class="summary-chip">🧘 Health: ${counts.health}</div>
+            <div class="summary-chip">🧘 Growth: ${counts.growth}</div>
             <div class="summary-chip">💼 Job: ${counts.employment}</div>
         `;
     }

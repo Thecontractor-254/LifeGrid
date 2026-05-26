@@ -318,12 +318,12 @@ body.dark .title-area h1 {
 }
 
 /* Category colors (fixed - these stay vibrant in both modes) */
-.cell.deepWork { background-color: #1f77b4; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
-.cell.rest { background-color: #2ca02c; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
-.cell.maintenance { background-color: #ff7f0e; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
-.cell.social { background-color: #d62728; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
-.cell.health { background-color: #9467bd; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
-.cell.employment { background-color: #8c564b; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.deepWork { background-color: #2E8B57; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.rest { background-color: #9467bd; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.maintenance { background-color: #FFA6C9; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.social { background-color: #556dbb; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.growth { background-color: #E4D00A; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
+.cell.employment { background-color: #268692; color: white; text-shadow: 0 0 1px rgba(0,0,0,0.2); }
 .cell.empty { background-color: var(--cell-empty); color: var(--cell-empty-text); }
 
 .cell:hover {
