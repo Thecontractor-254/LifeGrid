@@ -19,13 +19,26 @@
             <span id="monthDisplay">—</span>
             <button id="nextMonthBtn">→</button>
         </div>
-
         <button id="darkModeToggle" style="background: none; border: 1px solid var(--border-light); border-radius: 40px; padding: 6px 14px; cursor: pointer; color: var(--text-primary);">🌙 Dark</button>
 
         <div class="legend" id="legendContainer"></div>
     </div>
 
     <div class="weeks-container" id="weeksContainer"></div>
+
+        <div class="brush-selector" style="display: flex; align-items: center; gap: 8px; background: var(--bg-legend); padding: 4px 12px; border-radius: 40px;">
+            <span style="font-size: 0.7rem;">🎨 Brush:</span>
+            <select id="brushCategory" style="background: var(--bg-container); border: 1px solid var(--border-light); border-radius: 30px; padding: 6px 10px; font-size: 0.7rem; color: var(--text-primary);">
+                <option value="deepWork">💼 Deep work</option>
+                <option value="rest">😴 Recovery</option>
+                <option value="maintenance">🔧 Maintenance</option>
+                <option value="social">🎉 Social</option>
+                <option value="health">🌱 Growth</option>
+                <option value="employment">💼 Job</option>
+                <option value="empty">⚪ Eraser</option>
+            </select>
+            <input type="text" id="brushActivity" placeholder="tag" maxlength="20" style="background: var(--bg-container); border: 1px solid var(--border-light); border-radius: 30px; padding: 6px 10px; font-size: 0.7rem; width: 80px; color: var(--text-primary);">
+        </div>
 
     <div class="stats">
         <div class="summary" id="statsSummary"></div>
@@ -56,8 +69,8 @@
     </div>
 </div>
 
-<script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
 <script src="index.js"></script>
 
   </body>

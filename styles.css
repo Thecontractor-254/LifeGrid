@@ -495,3 +495,11 @@ button.small:hover {
         padding: 8px 4px;
     }
 }
+/* Drag paint indicator */
+body.drag-paint-mode .cell {
+    cursor: crosshair;
+}
+
+.cell {
+    user-select: none;
+}
